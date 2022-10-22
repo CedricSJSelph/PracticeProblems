@@ -1,5 +1,4 @@
 public class WeekFourAssignments {
-
     public static double averageGrade(int[] userData){
         double totalGrades= 0;
         int totalStduents = 0;
