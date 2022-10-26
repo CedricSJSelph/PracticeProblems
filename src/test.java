@@ -1,4 +1,7 @@
 import org.junit.Test;
+
+import java.sql.SQLOutput;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class test {
@@ -41,5 +44,15 @@ public class test {
         assertTrue(sumOf3and5Multiples.sumOfMultiples3And5(12) == 33);
 
         assertTrue(sumIf2and7Multiples.sumOfMultiples2And7(8)==19);
+    }
+
+    @Test
+    public void countWordsTest(){
+        WeekFiveAssignments WordCount = new WeekFiveAssignments();
+        String testSentence1 = " HOW MANY WORDS IS THIS "; // Should be 5
+        String testSentence2 = "How about this test? "; // 4?
+        System.out.println(WordCount.countWords(testSentence1));
+        assertTrue(WordCount.countWords(testSentence1)== 5);
+        assertTrue(WordCount.countWords(testSentence2) == 4);
     }
 }
