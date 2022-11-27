@@ -189,4 +189,38 @@ public class test {
         assertEquals(9, roman.romanNumeralToNumber("IX"));
         assertEquals(10, roman.romanNumeralToNumber("X"));
     }
+
+    /*
+    Ex1: [1,2,3] => 3 //Three different socks so Three socks with pairs
+    Ex2: [1,1,2,2] => 0 //Two types of socks and two of each type, each has a pair
+    Ex3: [1,1,1,2] => 2 //Two pair have a match, two socks do not
+     */
+
+    @Test
+    public void sockMatch(){
+        WeekEightAssignments matches = new WeekEightAssignments();
+        int[] basketOne = {1,2,3}; // 3
+        int[] basketTwo = {1,1,2,2}; // 0
+        int[] basketThree = {1,1,1,2}; //2
+        int[] basketFour = {1,2,3,1,2,3,4,5,6}; //3
+
+        assertEquals(3,matches.looseSocks(basketOne));
+        assertEquals(0,matches.looseSocks(basketTwo));
+        assertEquals(2,matches.looseSocks(basketThree));
+        assertEquals(3,matches.looseSocks(basketFour));
+    }
+
+    /*
+    Ex1: Kaleb, Burd => 1 //The two names only share the letter B
+    Ex2: Marshall Mathers => 5 //The two names share the letters m, a, r, s, and h
+    Ex3: Sherlock Holmes => 5 //The two names share s, h, e, l, and o
+     */
+    @Test
+    public void commonLetters(){
+        WeekEightAssignments letters = new WeekEightAssignments();
+
+        assertEquals(1,letters.commonLetters("Kaleb", "Burd")); //only B
+        assertEquals(5,letters.commonLetters("Marshall", "Mathers")); // Only M,A,R,S,H
+        assertEquals(5,letters.commonLetters("Sherlock", "Holmes")); // Only S,H,E,L,O
+    }
 }
