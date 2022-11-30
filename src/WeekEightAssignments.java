@@ -4,12 +4,6 @@ import java.util.Collections;
 
 public class WeekEightAssignments {
 
-    public static void main(String[] args){
-        int[] basketThree = {1,1,1,2}; //2
-        looseSocks(basketThree);
-
-    }
-
     int convert(char num){
         int value = 0;
         switch(num){
@@ -68,10 +62,20 @@ public class WeekEightAssignments {
                 i+=1;
             }
         }
-
         return unMatchedCount;
     }
 
+    /*/
+    What is int? return type integer
+    What is addNums? Name of function
+    What is parameter of this function? a and b are param. "inputs"
+    Explain the last two lines?
+     */
+    static int addNums(int a, int b){
+        System.out.println(a);
+        int variable = a+b;
+        return variable;
+    }
 
     /*
     Ex1: Kaleb, Burd => 1 //The two names only share the letter B
